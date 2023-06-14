@@ -1,19 +1,22 @@
-
 // Using Object Literal
 function App() {
+  let id = "id1";
   let str = `Hello Universe!!!`;
   let pi = 3.141159;
-  let user = { id: 1, name: "rohit" };
 
   // JSX :: User Interface
   return (
     <>
-      <h1>Hello World</h1>
-      <h1>{str}</h1>
+      <h1 id="id1">Hello World</h1>
+      <h1 id={id}>{str}</h1>
+
+      {/** USE CASES*/}
+      <h1 id="id1">Hello World</h1>
+      <h1 id={"id1"}>Hello World</h1>
+      <h1 id={`id1`}>Hello World</h1>
+      <h1 id={id}>Hello World</h1>
+
       <h1>PI {pi} !!</h1>
-      <h1>
-        ID: {user.id} Name: {user.name}
-      </h1>
     </>
   );
 }
